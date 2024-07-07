@@ -1,0 +1,41 @@
+﻿@model OturumYonetimi_Core.Models.Subeler
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Kaydet</h1>
+
+<h4>Şubeler</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="SubeAdi" class="control-label"></label>
+                <input asp-for="SubeAdi" class="form-control" />
+                <span asp-validation-for="SubeAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adres" class="control-label"></label>
+                <input asp-for="Adres" class="form-control" />
+                <span asp-validation-for="Adres" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-1">
+                <label asp-for="CalisanSayisi" class="control-label"></label>
+                <input asp-for="CalisanSayisi" class="form-control" />
+                <span asp-validation-for="CalisanSayisi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Listeye dön</a>
+</div>

@@ -1,0 +1,39 @@
+﻿@model OturumYonetimi_Core.Models.Urunler
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>SİL</h1>
+<div>
+    <h4>Ürünler</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            
+            @Html.DisplayNameFor(model => model.UrunAd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UrunAd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Adet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Adet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye dön</a>
+    </form>
+</div>
